@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوجو المطعم</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+            overflow: hidden;
+        }
+        img {
+            max-width: 40%;
+            height: auto;
+            animation: fadeIn 2s ease-in, bounce 3s infinite ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logo = document.querySelector("img");
+            
+            // Fade out and redirect
+            setTimeout(() => {
+                logo.style.animation = "fadeOut 1.5s ease-out forwards";
+                setTimeout(() => {
+                    window.location.href = "https://drive.google.com/file/d/1YLLM4An2rI0fjuAeYA6h5oqXXYy7xxu5/view";
+                }, 1500); // Time to match fadeOut duration
+            }, 4000); // Time before fadeOut starts
+        });
+    </script>
+</head>
+<body>
+    <img src="https://i.imgur.com/dgKvOzM.png" alt="لوجو المطعم">
+</body>
+</html>
